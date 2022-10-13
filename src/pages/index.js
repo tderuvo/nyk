@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { gql } from '@apollo/client';
+import Head from "next/head";
+import Link from "next/link";
+import { gql } from "@apollo/client";
 
-import { getApolloClient } from 'lib/apollo-client';
+import { getApolloClient } from "lib/apollo-client";
 
-import styles from '../styles/Home.module.css'
+import styles from "../styles/Home.module.css";
 
 export default function Home({ page, posts }) {
   const { title, description } = page;
@@ -17,39 +17,45 @@ export default function Home({ page, posts }) {
       </Head>
 
       <main className={styles.main}>
+        <h1>Hi</h1>
         <h1 className={styles.title}>{title}</h1>
 
-        <p className={styles.description}>{ description }</p>
+        <p className={styles.description}>{description}</p>
 
         <ul className={styles.grid}>
-          {posts && posts.length > 0 && posts.map(post => {
-            return (
-              <li key={post.slug} className={styles.card}>
-                <Link href={post.path}>
-                  <a>
-                    <h3 dangerouslySetInnerHTML={{
-                      __html: post.title
-                    }} />
-                  </a>
-                </Link>
-                <div dangerouslySetInnerHTML={{
-                  __html: post.excerpt
-                }} />
-              </li>
-            );
-          })}
+          {posts &&
+            posts.length > 0 &&
+            posts.map((post) => {
+              return (
+                <li key={post.slug} className={styles.card}>
+                  <Link href={post.path}>
+                    <a>
+                      <h3
+                        dangerouslySetInnerHTML={{
+                          __html: post.title,
+                        }}
+                      />
+                    </a>
+                  </Link>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: post.excerpt,
+                    }}
+                  />
+                </li>
+              );
+            })}
 
-          {!posts || posts.length === 0 && (
-            <li>
-              <p>
-                Oops, no posts found!
-              </p>
-            </li>
-          )}
+          {!posts ||
+            (posts.length === 0 && (
+              <li>
+                <p>Oops, no posts found!</p>
+              </li>
+            ))}
         </ul>
       </main>
     </div>
-  )
+  );
 }
 
 export async function getStaticProps() {
@@ -76,21 +82,23 @@ export async function getStaticProps() {
     `,
   });
 
-  const posts = data?.data.posts.edges.map(({ node }) => node).map(post => {
-    return {
-      ...post,
-      path: `/posts/${post.slug}`
-    }
-  });
+  const posts = data?.data.posts.edges
+    .map(({ node }) => node)
+    .map((post) => {
+      return {
+        ...post,
+        path: `/posts/${post.slug}`,
+      };
+    });
 
   const page = {
-    ...data?.data.generalSettings
-  }
+    ...data?.data.generalSettings,
+  };
 
   return {
     props: {
       page,
-      posts
-    }
-  }
+      posts,
+    },
+  };
 }
