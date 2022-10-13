@@ -17,7 +17,7 @@ export default function Home({ page, posts }) {
       </Head>
 
       <main className={styles.main}>
-        <h1>Hello</h1>
+        <h1>Hello Neo</h1>
         <h1 className={styles.title}>{title}</h1>
         <h2>line 2</h2>
         <p className={styles.description}>{description}</p>
