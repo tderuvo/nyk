@@ -6,7 +6,7 @@ import { getApolloClient } from "lib/apollo-client";
 
 import styles from "../styles/Home.module.css";
 
-export default function Home({ page, posts }) {
+export default function abc({ page, posts }) {
   const { title, description } = page;
   return (
     <div className={styles.container}>
