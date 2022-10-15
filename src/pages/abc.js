@@ -11,17 +11,20 @@ export default function abc({ page, posts }) {
   return (
     <div className={styles.container}>
       <Head>
+        {/*}
         <title>{title}</title>
+  */}
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1>Hello Neo</h1>
-        <h1 className={styles.title}>{title}</h1>
+        {/* } Removed title */}
+        {/* <h1 className={styles.title}>{title}</h1> 
         <h2>line 2 update</h2>
         <p className={styles.description}>{description}</p>
-
+*/}
         <ul className={styles.grid}>
           {posts &&
             posts.length > 0 &&
