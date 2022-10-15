@@ -19,7 +19,7 @@ export default function Home({ page, posts }) {
       <main className={styles.main}>
         <h1>Hello</h1>
         <h1 className={styles.title}>{title}</h1>
-        <h2>line 2</h2>
+        <h2>line 2 update</h2>
         <p className={styles.description}>{description}</p>
 
         <ul className={styles.grid}>
