@@ -19,7 +19,7 @@ export default function abc({ page, posts }) {
       </Head>
 
       <main className={styles.main}>
-        <h1>Hello Neo</h1>
+        <h1>The Rose Brigade</h1>
         {/* } Removed title */}
         {/* <h1 className={styles.title}>{title}</h1> 
         <h2>line 2 update</h2>

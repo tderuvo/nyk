@@ -11,16 +11,18 @@ export default function Home({ page, posts }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{title}</title>
+        {/* <title>{title}</title> */}
+        <title>The Rose Brigade</title>
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1>Hello Neo</h1>
+        <h1>Rose Brigade</h1>
+
+        {/* Remove the title to eliminate a trace back to original database
         <h1 className={styles.title}>{title}</h1>
-        <h2>line 2 update</h2>
-        <p className={styles.description}>{description}</p>
+  */}
 
         <ul className={styles.grid}>
           {posts &&
