@@ -18,8 +18,6 @@ export default function Home({ page, posts }) {
       </Head>
 
       <main className={styles.main}>
-        <h1>Rose Brigade</h1>
-
         {/* Remove the title to eliminate a trace back to original database
         <h1 className={styles.title}>{title}</h1>
   */}
