@@ -12,7 +12,7 @@ export default function Home({ page, posts }) {
     <div className={styles.container}>
       <Head>
         {/* <title>{title}</title> */}
-        <title>The Rose Brigade</title>
+        <title>The News</title>
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
