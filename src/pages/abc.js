@@ -19,8 +19,8 @@ export default function abc({ page, posts }) {
       </Head>
 
       <main className={styles.main}>
-        <h1>The Rose Brigade</h1>
-        <h2>News sources CNN BBC</h2>
+        <h1>Daily News</h1>
+        <h2>News sources CNN BBC Associated Press</h2>
         {/* } Removed title */}
         {/* <h1 className={styles.title}>{title}</h1> 
         <h2>line 2 update</h2>
